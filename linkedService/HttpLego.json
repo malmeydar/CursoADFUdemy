@@ -1,6 +1,7 @@
 {
 	"name": "HttpLego",
 	"properties": {
+		"description": "conexion al lego",
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
