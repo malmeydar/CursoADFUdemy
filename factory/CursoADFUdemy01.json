@@ -1,0 +1,9 @@
+{
+	"name": "CursoADFUdemy01",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4b3639a4-afd3-44fd-9e97-3317e2bb9f50",
+		"tenantId": "db6ae443-ba4e-491e-9375-7146e8f5f594"
+	}
+}
