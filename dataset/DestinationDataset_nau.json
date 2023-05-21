@@ -5,6 +5,9 @@
 			"referenceName": "ADLS_Datalackeudemy",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "1. Ingesta"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
