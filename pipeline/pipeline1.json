@@ -1,0 +1,9 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"folder": {
+			"name": "2. Move and Transform Activities"
+		},
+		"annotations": []
+	}
+}
