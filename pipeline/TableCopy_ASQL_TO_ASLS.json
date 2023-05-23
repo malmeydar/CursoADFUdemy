@@ -5,7 +5,14 @@
 			{
 				"name": "CopyTable_ASQL_ADLS",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "SetVariableFileName",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -63,7 +70,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"TableName": {
-								"value": "@pipeline().parameters.TableName",
+								"value": "@variables('FileName')",
 								"type": "Expression"
 							}
 						}
@@ -77,7 +84,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "FileName",
-					"value": ""
+					"value": {
+						"value": "@{pipeline().parameters.TableName}_@{utcNow()}.csv",
+						"type": "Expression"
+					}
 				}
 			}
 		],
