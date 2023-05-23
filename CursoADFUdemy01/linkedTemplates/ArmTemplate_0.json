@@ -835,7 +835,7 @@
 						"typeProperties": {
 							"variableName": "FileName",
 							"value": {
-								"value": "@{pipeline().parameters.TableName}_@{utcNow()}.csv",
+								"value": "@{pipeline().parameters.TableName}_@{formatDateTime(utcnow(),'yyyyMMdd')}.csv",
 								"type": "Expression"
 							}
 						}
