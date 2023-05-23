@@ -32,6 +32,106 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Nombre Empresa",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "nombreEmpresa",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Nombre Cliente",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "nombreCliente",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Tipo Cliente",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "tipoCliente",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Linea",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Linea",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Nro Celular",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "NroCelular",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Monto",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Monto",
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
+								}
+							},
+							{
+								"source": {
+									"name": "Fecha Contratacion",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "fechaContratacion",
+									"type": "DateTime",
+									"physicalType": "date"
+								}
+							},
+							{
+								"source": {
+									"name": "Tipo Servicio",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "tipoServicio",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
