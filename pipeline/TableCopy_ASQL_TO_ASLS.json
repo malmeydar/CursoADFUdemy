@@ -73,7 +73,8 @@
 		],
 		"parameters": {
 			"DB_Name": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "azureAdventureworksDW"
 			},
 			"TableName": {
 				"type": "String"
