@@ -5,11 +5,20 @@
 			"referenceName": "LinkedServices_ADLS_DataLakeUdemy",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"TableName": {
+				"type": "String"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().TableName",
+					"type": "Expression"
+				},
 				"folderPath": "Move And Transform",
 				"fileSystem": "dataset"
 			},
