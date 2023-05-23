@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LinkedServices_ADLS_DataLakeUdemy'"
 		},
+		"LinkedServices_ASQL_AWDW_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LinkedServices_ASQL_AWDW'"
+		},
 		"LinkedServices_ASQL_DB_CURSO_ADF_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LinkedServices_ASQL_DB_CURSO_ADF'"
@@ -63,6 +67,9 @@
 					},
 					"LinkedServices_ADLS_DataLakeUdemy_accountKey": {
 						"value": "[parameters('LinkedServices_ADLS_DataLakeUdemy_accountKey')]"
+					},
+					"LinkedServices_ASQL_AWDW_connectionString": {
+						"value": "[parameters('LinkedServices_ASQL_AWDW_connectionString')]"
 					},
 					"LinkedServices_ASQL_DB_CURSO_ADF_connectionString": {
 						"value": "[parameters('LinkedServices_ASQL_DB_CURSO_ADF_connectionString')]"

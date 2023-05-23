@@ -11,6 +11,9 @@
 		"LinkedServices_ADLS_DataLakeUdemy_accountKey": {
 			"value": ""
 		},
+		"LinkedServices_ASQL_AWDW_connectionString": {
+			"value": ""
+		},
 		"LinkedServices_ASQL_DB_CURSO_ADF_connectionString": {
 			"value": ""
 		},
