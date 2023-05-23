@@ -1,0 +1,25 @@
+{
+	"name": "DSPrimerDataFlow",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LinckedServices_ABS_StorageUdemy",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "3.Data Flow"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "1.PrimerDataFLow",
+				"container": "dataflowdataset"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
