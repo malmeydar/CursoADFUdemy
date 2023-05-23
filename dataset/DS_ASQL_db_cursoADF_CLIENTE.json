@@ -5,6 +5,9 @@
 			"referenceName": "LinkedServices_ASQL_DB_CURSO_ADF",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "Move And Transform Activities"
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [
