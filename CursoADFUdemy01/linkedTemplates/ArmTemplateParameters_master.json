@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "CursoADFUdemy01"
+		},
+		"ADLS_Datalackeudemy_accountKey": {
+			"value": ""
+		},
+		"LinkedServices_ADLS_DataLakeUdemy_accountKey": {
+			"value": ""
+		},
+		"LinkedServices_ASQL_DB_CURSO_ADF_connectionString": {
+			"value": ""
+		},
+		"ADLS_Datalackeudemy_properties_typeProperties_url": {
+			"value": "https://datalackeudemy.dfs.core.windows.net/"
+		},
+		"HttpLego_properties_typeProperties_url": {
+			"value": "https://cdn.rebrickable.com/media/downloads/"
+		},
+		"LinkedServices_ADLS_DataLakeUdemy_properties_typeProperties_url": {
+			"value": "https://datalackeudemy.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

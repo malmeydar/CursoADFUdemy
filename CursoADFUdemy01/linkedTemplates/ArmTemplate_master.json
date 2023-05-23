@@ -1,0 +1,84 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "CursoADFUdemy01"
+		},
+		"ADLS_Datalackeudemy_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ADLS_Datalackeudemy'"
+		},
+		"LinkedServices_ADLS_DataLakeUdemy_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LinkedServices_ADLS_DataLakeUdemy'"
+		},
+		"LinkedServices_ASQL_DB_CURSO_ADF_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LinkedServices_ASQL_DB_CURSO_ADF'"
+		},
+		"ADLS_Datalackeudemy_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://datalackeudemy.dfs.core.windows.net/"
+		},
+		"HttpLego_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://cdn.rebrickable.com/media/downloads/"
+		},
+		"LinkedServices_ADLS_DataLakeUdemy_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://datalackeudemy.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "CursoADFUdemy01_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ADLS_Datalackeudemy_accountKey": {
+						"value": "[parameters('ADLS_Datalackeudemy_accountKey')]"
+					},
+					"LinkedServices_ADLS_DataLakeUdemy_accountKey": {
+						"value": "[parameters('LinkedServices_ADLS_DataLakeUdemy_accountKey')]"
+					},
+					"LinkedServices_ASQL_DB_CURSO_ADF_connectionString": {
+						"value": "[parameters('LinkedServices_ASQL_DB_CURSO_ADF_connectionString')]"
+					},
+					"ADLS_Datalackeudemy_properties_typeProperties_url": {
+						"value": "[parameters('ADLS_Datalackeudemy_properties_typeProperties_url')]"
+					},
+					"HttpLego_properties_typeProperties_url": {
+						"value": "[parameters('HttpLego_properties_typeProperties_url')]"
+					},
+					"LinkedServices_ADLS_DataLakeUdemy_properties_typeProperties_url": {
+						"value": "[parameters('LinkedServices_ADLS_DataLakeUdemy_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
