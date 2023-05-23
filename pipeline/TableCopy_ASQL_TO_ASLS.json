@@ -69,6 +69,16 @@
 						}
 					}
 				]
+			},
+			{
+				"name": "SetVariableFileName",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "FileName",
+					"value": ""
+				}
 			}
 		],
 		"parameters": {
@@ -77,6 +87,11 @@
 				"defaultValue": "azureAdventureworksDW"
 			},
 			"TableName": {
+				"type": "String"
+			}
+		},
+		"variables": {
+			"FileName": {
 				"type": "String"
 			}
 		},
