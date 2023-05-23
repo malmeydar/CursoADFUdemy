@@ -194,11 +194,20 @@
 					"referenceName": "LinkedServices_ADLS_DataLakeUdemy",
 					"type": "LinkedServiceReference"
 				},
+				"parameters": {
+					"TableName": {
+						"type": "String"
+					}
+				},
 				"annotations": [],
 				"type": "DelimitedText",
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
+						"fileName": {
+							"value": "@dataset().TableName",
+							"type": "Expression"
+						},
 						"folderPath": "Move And Transform",
 						"fileSystem": "dataset"
 					},
@@ -230,6 +239,9 @@
 				},
 				"parameters": {
 					"DB_Name": {
+						"type": "string"
+					},
+					"TablaName": {
 						"type": "string"
 					}
 				},
@@ -305,7 +317,10 @@
 				],
 				"typeProperties": {
 					"schema": "SalesLT",
-					"table": "Customer"
+					"table": {
+						"value": "@dataset().TablaName",
+						"type": "Expression"
+					}
 				}
 			},
 			"dependsOn": [
@@ -781,6 +796,10 @@
 									"DB_Name": {
 										"value": "@pipeline().parameters.DB_Name",
 										"type": "Expression"
+									},
+									"TablaName": {
+										"value": "@pipeline().parameters.TableName",
+										"type": "Expression"
 									}
 								}
 							}
@@ -789,7 +808,12 @@
 							{
 								"referenceName": "ADLS_DataLAkeUdemy",
 								"type": "DatasetReference",
-								"parameters": {}
+								"parameters": {
+									"TableName": {
+										"value": "@pipeline().parameters.TableName",
+										"type": "Expression"
+									}
+								}
 							}
 						]
 					}
@@ -800,7 +824,11 @@
 				},
 				"parameters": {
 					"DB_Name": {
-						"type": "string"
+						"type": "string",
+						"defaultValue": "azureAdventureworksDW"
+					},
+					"TableName": {
+						"type": "String"
 					}
 				},
 				"folder": {
