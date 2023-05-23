@@ -8,10 +8,16 @@
 		"ADLS_Datalackeudemy_accountKey": {
 			"value": ""
 		},
+		"LinckedServices_ABS_StorageUdemy_connectionString": {
+			"value": ""
+		},
 		"LinkedServices_ADLS_DataLakeUdemy_accountKey": {
 			"value": ""
 		},
 		"LinkedServices_ASQL_AWDW_connectionString": {
+			"value": ""
+		},
+		"LinkedServices_ASQL_AWDW2_connectionString": {
 			"value": ""
 		},
 		"LinkedServices_ASQL_DB_CURSO_ADF_connectionString": {
